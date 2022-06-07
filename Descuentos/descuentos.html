@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>porcentajes y descuentos</title>
+  </head>
+  <body>
+    <h1>porcentajes y descuentos</h1>
+
+    <form action="">
+      <script src="/descuentos/descuentos.js"></script>
+      <!-- PRECIO DEL ARTICULO -->
+      <label for="input-precio">
+        Por favor introduce el precio del articulo:
+        <input id="input-precio" type="number" />
+      </label>
+
+      <!-- DESCUENTO -->
+      <label for="input-descuento">
+        Por favor introduce el valor del descuento:
+        <input id="input-descuento" type="number" />
+      </label>
+
+      <!-- BOTONES -->
+      <button type="button" onclick="precioAPagar()">
+        Calcular valor a pagar
+      </button>
+      <!-- para mostrar el resultado en html, se puede hacer de la siguiente manera:
+      1-Crear una etiqueta P
+      2- Ir a js -->
+      <p id="ResultadoP"></p>
+    </form>
+  </body>
+</html>

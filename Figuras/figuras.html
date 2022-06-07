@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figuras geometricas</title>
+  </head>
+  <body>
+    <h1>Figuras geometricas</h1>
+
+    <!-- De esta forma se agrega un js al html: -->
+    <script src="./figuras.js"></script>
+
+    <!-- FORM DEL CUADRADO -->
+    <section>
+      <h2>Calcula el area y perimetro de un cuadrado</h2>
+      <form action="">
+        <!-- input-Lados-Cuadrado -->
+        <label for="InputCuadrado">
+          Escribe cuanto mide cada lado de tu cuadrado:
+        </label>
+        <input id="InputCuadrado" type="number" />
+
+        <!-- botones Cuadrado -->
+        <button type="button" onclick="calcularPerimetroCuadrado()">
+          Calcular el perimetro1
+        </button>
+        <button type="button" onclick="calcularAreaCuadrado()">
+          Calcular el area
+        </button>
+      </form>
+    </section>
+
+    <!-- FORM DEL TRINAGULO -->
+    <section>
+      <h2>Cacula el area y perimetro del triangulo</h2>
+      <form action="">
+        <!-- input-ladoIzquierdo-Triangulo -->
+        <label for="input-ladoIzquierdo-Triangulo">
+          Escribe cuanto mide el lado izquierdo de tu triangulo:
+        </label>
+        <input id="input-ladoIzquierdo-Triangulo" type="number" />
+
+        <!-- input-ladoDerecho-Triangulo -->
+        <label for="input-ladoDerecho-Triangulo">
+          Escribe cuanto mide el lado derecho de tu triangulo:
+        </label>
+        <input id="input-ladoDerecho-Triangulo" type="number" />
+
+        <!-- input-Base-Triangulo -->
+        <label for="input-Base-Triangulo">
+          Escribe cuanto mide la base de tu triangulo:
+        </label>
+        <input id="input-Base-Triangulo" type="number" />
+
+        <!-- input-Altura-Triangulo -->
+        <label for="input-Altura-Triangulo">
+          Escribe cuanto mide la altura de tu triangulo:
+        </label>
+        <input id="input-Altura-Triangulo" type="number" />
+
+        <!-- botones triangulo -->
+        <button type="button" onclick="calcularPerimetroTriangulo()">
+          Calcular perimetro
+        </button>
+        <button type="button" onclick="calcularAreaTriangulo()">
+          Calcular area
+        </button>
+      </form>
+    </section>
+
+    <!-- FORM DEL CIRCULO -->
+    <section>
+      <h2>Calcula el area y perimetro del circulo</h2>
+      <form action="">
+        <!-- input-radio-circulo -->
+        <label for="input-radio-circulo"> Escribe el radio del circulo: </label>
+        <input id="input-radio-circulo" type="text" />
+
+        <!-- botones circulo -->
+        <button type="button" onclick="calcularPerimetroCirculo()">
+          Calcular perimetro
+        </button>
+        <button type="button" onclick="calcularAreaCirculo()">
+          Calcular area
+        </button>
+      </form>
+    </section>
+
+    <!-- FORM DEL TrianguloIsosceles -->
+    <section>
+      <form action="">
+        <h2>Calcula altura de un triangulo isosceles</h2>
+
+        <!-- input-ladoIzquierdo-TrianguloIsosceles-->
+        <label for="input-ladoIzquierdo-trianguloIsosceles">
+          Escribe cuanto mide el lado izquierdo de tu triangulo isosceles
+        </label>
+        <input id="input-ladoIzquierdo-trianguloIsosceles" type="number" />
+
+        <!-- input-ladoDerecho-TrianguloIsosceles-->
+        <label for="input-ladoDerecho-trianguloIsosceles">
+          Escribe cuanto mide el lado derecho de tu triangulo isosceles
+        </label>
+        <input id="input-ladoDerecho-trianguloIsosceles" type="number" />
+
+        <!-- input-ladoIzquierdo-TrianguloIsosceles-->
+        <label for="input-base-trianguloIsosceles">
+          Escribe cuanto mide la base de tu triangulo isosceles
+        </label>
+        <input id="input-base-trianguloIsosceles" type="number" />
+        <!-- botones TrianguloIsosceles -->
+        <button type="button" onclick="calcularAlturaTrianguloIsosceles()">
+          Calcular altura
+        </button>
+      </form>
+    </section>
+  </body>
+</html>
