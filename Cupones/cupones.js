@@ -23,13 +23,13 @@ function resultadoCupones (){
 
     // Se crea un condicional para q le muestre al usuario si el codigo es valido o no.
     if(busca === undefined){// el undefined es el valor que trae la var busca cuando el cupon es invalido.
-        const ResultadoP = document.getElementById("ResultadoP"); // 3. Se llama la etiqueta p en una variable, para poderla utilizar
+        const ResultadoP = document.getElementById("ResultadoP"); //Se llama la etiqueta p en una variable, para poderla utilizar
         ResultadoP.innerText = "El cupon es invalido";
     }else{
         var array2 = busca.valor; // esto me crea una variable con el valor del cupon que se ingreso. lee objeto y trae valor
         var resultado = calculaDescuento(valor, array2);
     
-        const ResultadoP = document.getElementById("ResultadoP"); // 3. Se llama la etiqueta p en una variable, para poderla utilizar
+        const ResultadoP = document.getElementById("ResultadoP"); // MOSTRAR VALOR EN HTML. Se llama la etiqueta p en una variable, para poderla utilizar
         ResultadoP.innerText = "El valor a pagar es de: "+ resultado;
     }
 }

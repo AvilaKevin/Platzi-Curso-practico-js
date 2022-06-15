@@ -1,0 +1,244 @@
+:root {
+    --h1: 12rem;
+    --h2: 1.6rem;
+    --text: 1.2rem;
+    --color-text: rgb(202, 240, 248);
+    --border: rgb(43, 45, 66);
+    --main-color: #00b4db;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Signika', sans-serif;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* --- --- TOP SECTION --- --- */
+.top {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    margin-bottom: 66px;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-color);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), url("https://ludensfaber.files.wordpress.com/2015/06/complex-or-complicated_c-denis-ismagilov123rf-com.jpg"); */
+}
+
+
+.tittle-container {
+    width: 30%;
+}
+
+
+.tittle-container__tittle {
+    font-size: var(--h1);
+    color: var(--color-text);
+    text-align: center;
+}
+
+.tittle-container__emoji{
+    font-size: 8rem;
+}
+
+.top__image {
+    width: 30%;
+    height: 100%;
+}
+
+
+/* --- --- CAROUSEL SECTION --- --- */
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+/* to adjust the arrows */
+.carousel{
+    position: relative; 
+}
+
+.carousel__element {
+    background-color: var(--main-color);
+    /* width: 750px;
+    height: 325px; */
+    border-radius: 20px;
+    margin: 0px 5px 0px 5px;
+    text-align: center;
+    font-size: var(--h2);
+}
+
+.carousel__element:hover {
+    cursor: pointer;
+}
+
+.element__h2 {
+    color: var(--color-text);
+}
+
+.element__h2 {
+    margin: 10px 0px;
+}
+
+.glider-slide img {
+    max-width: 350px !important;
+}
+
+.carousel__previous,
+.carousel__next {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 60px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    color: #caf0f8;
+    background-color: var(--main-color);
+}
+
+.carousel__previous:hover,
+.carousel__next:hover {
+    opacity: 50%;
+}
+
+.carousel__previous {
+    left: -30px;
+}
+
+.carousel__next {
+    right: -30px;
+}
+
+.carousel__list {
+    overflow: hidden;
+}
+
+.carousel__indicators .glider-dot{
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: var(--main-color);
+    opacity: 60%;
+    border-radius: 0;
+}
+
+.carousel__indicators .glider-dot:hover{
+    background: var(--main-color);
+    opacity: 26%;
+}
+
+.carousel__indicators .glider-dot.active{
+    background: rgb(202, 240, 248);
+}
+
+/* --- --- FOOTER SECTION --- --- */
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 10%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section {
+    color: var(--color-text);
+    text-align: center;
+}
+
+.footer-section__h2 {
+    font-size: var(--h2);
+    margin-bottom: 10px;
+}
+
+.footer-section__p {
+    font-size: var(--text);
+}
+
+
+/* --- --- RESPONSIVE --- --- */
+@media (max-width: 1900px){
+    .top {
+        height: 250px;
+        margin-bottom: 28px;
+    }
+
+    .tittle-container__tittle {
+        font-size: 10rem;
+    }
+
+    .tittle-container__emoji {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 1594px) {
+    .top {
+        margin-bottom: 60px;
+    }
+
+    .tittle-container {
+        width: 60%;
+    }
+
+    .glider-slide img {
+        max-width: 300px !important;
+    }
+}
+
+@media (max-width: 1130px) {
+    .top {
+        margin-bottom: 80px;
+    }
+
+    .glider-slide img {
+        max-width: 250px !important;
+    }
+}
+
+@media (max-width: 880px) {
+    .top {
+        margin-bottom: 100px;
+    }
+    .glider-slide img {
+        max-width: 200px !important;
+    }
+}
+
+@media (max-width: 648px) {
+    .tittle-container__tittle {
+        font-size: 6rem;
+    }
+
+    .tittle-container__emoji {
+        font-size: 4rem;
+    }
+}
+
+

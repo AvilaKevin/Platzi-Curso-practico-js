@@ -14,7 +14,7 @@ const salariosColSorted = salariosCol.sort(
 );
 
 
-//3. MEDIANA DE SALARIOS
+//      3. MEDIANA DE SALARIOS
 
 function calcularMediaAritmetica(lista){
 
@@ -54,6 +54,35 @@ function medianaSalarios(lista) {
 
 
 //3. mostrar resultados.
-console.log(
-    medianaSalarios(salariosColSorted)
+
+const medianaGeneralCol = medianaSalarios(salariosColSorted);
+
+
+//      4. CALCULANDO EL TOP 10%
+
+
+//Calcular el %
+
+
+// Crear variable de posicion inicial de corte de array / la cual sacara el 10% de nuestro array
+const spliceStart = parseInt((salariosColSorted.length *90)/ 100);
+
+
+// Crear variable de cuantas posiciones se extraeran del array
+const spliceCount = salariosColSorted.length - spliceStart;
+
+
+// Se crea funcion con el metodo splice
+const salariosColTop10 = salariosColSorted.splice(
+    spliceStart,
+    spliceCount
 );
+
+
+const medianaTop10Col = medianaSalarios(salariosColTop10);
+
+
+console.log({
+    medianaGeneralCol,
+    medianaTop10Col,
+})

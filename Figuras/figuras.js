@@ -57,7 +57,8 @@ function calcularPerimetroCuadrado(){
     const value = input.value; // Se especifica que solo se quiere llamar el valor q se ingreso en el input
 
     const perimetro = perimetroCuadrado(value);
-    alert(perimetro);
+    const resultadoP = document.getElementById("resultado_Cuadrado");
+    resultadoP.innerText = "El perimetro es de: "+ perimetro; 
 }
 
 function calcularAreaCuadrado(){
@@ -65,7 +66,8 @@ function calcularAreaCuadrado(){
     // const value = input.value; // Se especifica que solo se quiere llamar el valor q se ingreso en el input
 
     const area = areaCuadrado(input);
-    alert(area);
+    const resultadoP = document.getElementById("resultado_Cuadrado");
+    resultadoP.innerText = "El area es de: "+ area; 
 }
 
 // Triangulo-button
@@ -75,7 +77,8 @@ function calcularPerimetroTriangulo(){
     const base = parseInt(document.getElementById("input-Base-Triangulo").value);
 
     const perimetro = perimetroTriangulo(lado1,lado2,base);
-    alert(perimetro);
+    const resultadoP = document.getElementById("resultado_Triangulo");
+    resultadoP.innerText = "El perimetro es de: "+ perimetro; 
 }
 
 function calcularAreaTriangulo(){
@@ -83,7 +86,8 @@ function calcularAreaTriangulo(){
     const altura = parseInt(document.getElementById("input-Altura-Triangulo").value);
 
     const area = areaTriangulo(base, altura);
-    alert(area);
+    const resultadoP = document.getElementById("resultado_Triangulo");
+    resultadoP.innerText = "El area es de: "+ area; 
 }
 
 // Circulo-button
@@ -91,14 +95,16 @@ function calcularPerimetroCirculo(){
     const radio = parseInt(document.getElementById("input-radio-circulo").value);
 
     const perimetro = perimetroCirculo (radio);
-    alert(perimetro);
+    const resultadoP = document.getElementById("resultado_Circulo");
+    resultadoP.innerText = "El perimetro es de: "+ perimetro; 
 }
 
 function calcularAreaCirculo(){
     const radio = parseInt(document.getElementById("input-radio-circulo").value);
 
     const area = areaCirculo(radio);
-    alert(area);
+    const resultadoP = document.getElementById("resultado_Circulo");
+    resultadoP.innerText = "El area es de: "+ area; 
 }
 
 //TrianguloIsosceles-Button
@@ -108,5 +114,6 @@ function calcularAlturaTrianguloIsosceles(){
     const base = parseInt(document.getElementById("input-base-trianguloIsosceles").value);
 
     const altura = alturaTrianguloIsosceles(lado1, lado2, base);
-    alert(altura);
+    const resultadoP = document.getElementById("resultado_TrianguloIsosceles");
+    resultadoP.innerText = "La altura es de: "+ altura; 
 }
