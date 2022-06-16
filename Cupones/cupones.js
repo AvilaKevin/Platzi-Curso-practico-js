@@ -8,30 +8,50 @@ function calculaDescuento(valor, descuento){ // funcion para realizar el calculo
     return valor*(100 - descuento)/100
 }
 
+
 /// CONEXION HTML
 function resultadoCupones (){
-    var valor = parseInt(document.getElementById("input-precio").value);
+    const valor = parseInt(document.getElementById("input-precio").value);
 
-    var inputcupones = document.getElementById("input-cupones").value;
+    const inputcupones = document.getElementById("input-cupones").value;
 
-    // Se crea una varible para validar.
-    var busca = misCupones.find( // esto realiza un filtro dentro del array, el cual me trae el valor especificado si es que lo hay.
-        function(cuponex) {
-            return cuponex.cupon === inputcupones // el inputcupones es el valor que necesito o el q solicite validar
-        }
-    );
+    const ResultadoP = document.getElementById("ResultadoP"); // MOSTRAR VALOR EN HTML. 3. Se llama la etiqueta p en una variable, para poderla utilizar
 
-    // Se crea un condicional para q le muestre al usuario si el codigo es valido o no.
-    if(busca === undefined){// el undefined es el valor que trae la var busca cuando el cupon es invalido.
-        const ResultadoP = document.getElementById("ResultadoP"); //Se llama la etiqueta p en una variable, para poderla utilizar
-        ResultadoP.innerText = "El cupon es invalido";
-    }else{
-        var array2 = busca.valor; // esto me crea una variable con el valor del cupon que se ingreso. lee objeto y trae valor
-        var resultado = calculaDescuento(valor, array2);
+    console.log(valor);
+    console.log(typeof(valor));
+
+    function Operacion(){
+        // Se crea una varible para validar.
+        var busca = misCupones.find( // esto realiza un filtro dentro del array, el cual me trae el valor especificado si es que lo hay.
+            function(cuponex) {
+                return cuponex.cupon === inputcupones // el inputcupones es el valor que necesito o el q solicite validar
+            }
+        );
     
-        const ResultadoP = document.getElementById("ResultadoP"); // MOSTRAR VALOR EN HTML. Se llama la etiqueta p en una variable, para poderla utilizar
-        ResultadoP.innerText = "El valor a pagar es de: "+ resultado;
+        // Se crea un condicional para q le muestre al usuario si el codigo es valido o no.
+        if(busca === undefined){// el undefined es el valor que trae la var busca cuando el cupon es invalido.
+            ResultadoP.innerText = "El cupon es invalido";
+        }else{
+            var array2 = busca.valor; // esto me crea una variable con el valor del cupon que se ingreso. lee objeto y trae valor
+            var resultado = calculaDescuento(valor, array2);
+        
+            ResultadoP.innerText = "El valor a pagar es de: "+ resultado;
+        }
     }
+    
+    //Validacion
+    if (isNaN(valor) === true && inputcupones === ""){
+        ResultadoP.innerText = "ingrese valor y cupon";
+    }else {
+        if (isNaN(valor) === true){
+            ResultadoP.innerText = "ingrese valor";
+        }else if (inputcupones === ""){
+            ResultadoP.innerText = "ingrese cupon";
+        }else {
+            Operacion();
+        }
+    }
+    
 }
 
 
