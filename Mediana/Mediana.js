@@ -1,42 +1,38 @@
-const lista1 = [
-    100,
-    200,
-    4000000,
-    1000,
-    800,
-];
-
-
-// 0. Se organiza array
-function comparacion(a,b){
-    return a - b;
+// ORGANIZA ARRAY
+function comparacion(a, b) {
+  return a - b;
 }
 
-lista1.sort(comparacion)
-
-console.log (lista1);
-
-
-// 1. Validar si la lista es par o impar:
-function esPar(numerito){ 
-    if (numerito % 2 == 0){ // si numerito divido a la mitad genera residuo igual a 0 entonces: / % hace referencia a modulo o residuo
-        return true;
-    }else {
-        return false;
-    }
+// VALIDACION PAR
+function esPar(numero) {
+  if (numero % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
+/// --- -- CONEXION HTML -- --- ///
+function resultadoMediana() {
+  // VARIABLES
+  const lista = document.getElementById("input-lista").value;
+  const ResultadoP = document.getElementById("ResultadoP");
+  const listaModificada = lista.split(",");
+  const numberArray = listaModificada.map(Number);
+  numberArray.sort(comparacion);
 
-// 2. Se crea una varible para que me muestre el numero que esta en la mitad "Si es q es impar la lista"
-const mitadLista1 = parseInt(lista1.length / 2); // se utilizo parseint para que retorne un resultado sin decimales
+  // NUMERO MITAD
+  const mitadLista1 = parseInt(numberArray.length / 2);
+  const mitadLista2 = (numberArray[mitadLista1 - 1] + numberArray[mitadLista1]) / 2;
 
+  // RESULTADO
+  let mediana;
 
-// 3. Se crea una variable que almacene el resultado
-let mediana;
-
-
-if(esPar(lista1.length)){
-
-}else{
-    mediana = lista1[mitadLista1];
+  if (esPar(numberArray.length)) {
+    mediana = mitadLista2;
+    ResultadoP.innerText = mediana;
+  } else {
+    mediana = numberArray[mitadLista1];
+    ResultadoP.innerText = mediana;
+  }
 }

@@ -1,222 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.<button class="buttons"com/css2?family=Signika&display=swap"
-      rel="stylesheet"
-    />
-    <title>Figuras geometricas</title>
-  </head>
-  <body>
-    <!-- --- TOP SECTION --- -->
-    <header class="header">
-      <a href="../index.html">
-        <div class="tittle-container">
-          <h2 class="tittle-container__tittle">
-            MATH <span class="tittle-container__emoji">➗</span>
-          </h2>
-          <h2 class="tittle-container__tittle tittle-container__tittle--align">
-            <span class="tittle-container__emoji">✖️</span> TOOLS
-          </h2>
-        </div>
-      </a>
 
-      <nav class="nav">
-        <ul class="nav_ul">
-          <li class="ul_li">
-            <a href="../Figuras/figuras.html"" class="li__a">Figure</a>
-          </li>
-          <li class="ul_li"> 
-            <a href="../Cupones/cupones.html" class="li__a"> Cupon Validator </a>
-          </li>
-          <li class="ul_li"> 
-            <a href="../Descuentos/descuentos.html" class="li__a"> Discounts </a>
-          </li>
-          <li class="ul_li"> 
-            <a href="../Mediana/Mediana.html" class="li__a"> Median </a>
-          </li>
-          <li class="ul_li"> 
-            <a href="../Moda/moda.html" class="li__a"> Mode </a>
-          </li>
-          <li class="ul_li"> 
-            <a href="../Ponderado/ponderado.html" class="li__a">Weighting</a>
-          </li>
-          <li class="ul_li"> 
-            <a href="../Promedio/promedio.html" class="li__a">Arithmetic mean</a>
-          </li>
-          <li class="ul_li"> 
-            <a href="../Salarios/salarios.html" class="li__a">Wages</a>
-          </li>
-          <li class="ul_li"> 
-            <a href="../Mediana/Mediana.html" class="li__a">PRUEBA</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet" />
+  <title>Figuras geometricas</title>
+</head>
 
-    <!-- De esta forma se agrega un js al html: -->
-    <script src="./figuras.js"></script>
-
-    <main class="container">
-    
-      <!-- --- SQUARE FORM --- -->
-      <div class="form-container">
-        <figure class="img-container">
-          <img class ="img-container__img"src="https://cdn-user-icons.flaticon.com/73410/73410993/1655224237801.svg?token=exp=1655225174~hmac=cfed3dd89dac7c0069dc72b8e123f54e" alt="This is a square">
-        </figure>
-        <section class="form-section">
-          <h2 class="form-section__h2">Calcula area y perimetro de un cuadrado</h2>
-          <form class="form" action="">
-            <div class="inputs-form">
-              <!-- input-Lados-Cuadrado -->
-              <label class="form__label" for="InputCuadrado">
-                Escribe cuanto mide cada lado de tu cuadrado:
-              </label>
-              <input class="form__input" id="InputCuadrado" type="number" />
-            </div>
-    
-            <!-- botones Cuadrado -->
-            <button class="buttons" type="button" onclick="calcularPerimetroCuadrado()">
-              Calcular el perimetro
-            </button>
-            <button class="buttons" type="button" onclick="calcularAreaCuadrado()">
-              Calcular el area
-            </button>
-
-            <p id="resultado_Cuadrado" class="buttons-resultado"></p>
-          </form>
-        </section>
+<body>
+  <!-- --- TOP SECTION --- -->
+  <header class="header">
+    <a href="../index.html">
+      <div class="tittle-container">
+        <h2 class="tittle-container__tittle">
+          MATH <span class="tittle-container__emoji">➗</span>
+        </h2>
+        <h2 class="tittle-container__tittle tittle-container__tittle--align">
+          <span class="tittle-container__emoji">✖️</span> TOOLS
+        </h2>
       </div>
-  
-      <!-- --- FORM DEL TRINAGULO --- -->
-      <div class="form-container">
-        <figure class="img-container">
-          <img class ="img-container__img"src="https://cdn-user-icons.flaticon.com/73410/73410993/1655224239981.svg?token=exp=1655225174~hmac=88eb12f79d8d645b582744de0cf43c84" alt="This is a triangle">
-        </figure>
-        <section class="form-section">
-          <h2 class="form-section__h2">Cacula area y perimetro del triangulo</h2>
-          <form class="form" action="">
-            <div class="inputs-form">
-              <!-- input-ladoIzquierdo-Triangulo -->
-              <label for="input-ladoIzquierdo-Triangulo">
-                Escribe cuanto mide el lado izquierdo de tu triangulo:
-              </label>
-              <input class="form__input" class="form__input" id="input-ladoIzquierdo-Triangulo" type="number" /> 
-              <br>
-              <!-- input-ladoDerecho-Triangulo -->
-              <label for="input-ladoDerecho-Triangulo">
-                Escribe cuanto mide el lado derecho de tu triangulo:
-              </label>
-              <input class="form__input" class="form__input" id="input-ladoDerecho-Triangulo" type="number" />
-              <br>
-      
-              <!-- input-Base-Triangulo -->
-              <label for="input-Base-Triangulo">
-                Escribe cuanto mide la base de tu triangulo:
-              </label>
-              <input class="form__input" class="form__input" id="input-Base-Triangulo" type="number" /> 
-              <br>
-      
-              <!-- input-Altura-Triangulo -->
-              <label for="input-Altura-Triangulo">
-                Escribe cuanto mide la altura de tu triangulo:
-              </label>
-              <input class="form__input" class="form__input" id="input-Altura-Triangulo" type="number" /> 
-            </div>
-    
-            <!-- botones triangulo -->
-            <button class="buttons"type="button" onclick="calcularPerimetroTriangulo()">
-              Calcular perimetro
-            </button>
-            <button class="buttons"type="button" onclick="calcularAreaTriangulo()">
-              Calcular area
-            </button>
-            <p id="resultado_Triangulo" class="buttons-resultado"></p>
-          </form>
-        </section>
-      </div>
-  
-      <!-- FORM DEL CIRCULO -->
-      <div class="form-container">
-        <figure class="img-container">
-          <img class ="img-container__img"src="https://cdn-user-icons.flaticon.com/73410/73410993/1655224241558.svg?token=exp=1655225174~hmac=e5db291f45b36a50941daa09fb3c7d83" alt="This is a circle">
-        </figure>
-        <section class="form-section">
-          <h2 class="form-section__h2">Calcula area y perimetro del circulo</h2>
-          <form class="form" action="">
-            <div class="inputs-form">
-              <!-- input-radio-circulo -->
-              <label for="input-radio-circulo"> Escribe el radio del circulo: </label>
-              <input class="form__input" class="form__input" id="input-radio-circulo" type="text" />
-            </div>
-    
-            <!-- botones circulo -->
-            <button class="buttons"type="button" onclick="calcularPerimetroCirculo()">
-              Calcular perimetro
-            </button>
-            <button class="buttons"type="button" onclick="calcularAreaCirculo()">
-              Calcular area
-            </button>
-            <p id="resultado_Circulo" class="buttons-resultado"></p>
-          </form>
-        </section>
-      </div>
-  
-      <!-- FORM DEL TrianguloIsosceles -->
-      <div class="form-container">
-        <figure class="img-container">
-          <img class ="img-container__img"src="https://cdn-user-icons.flaticon.com/73410/73410993/1655224909966.svg?token=exp=1655225815~hmac=80b0e366b17c779b55716e589c091372" alt="This is a Isosceles triangle">
-        </figure>
-        <section class="form-section">
-          <h2 class="form-section__h2">Calcula altura de un triangulo isosceles</h2>
+    </a>
 
-          <form class="form" action="">
-            <div class="inputs-form">
-              <!-- input-ladoIzquierdo-TrianguloIsosceles-->
-              <label for="input-ladoIzquierdo-trianguloIsosceles">
-                Escribe cuanto mide el lado izquierdo de tu triangulo isosceles
-              </label>
-              <input class="form__input" id="input-ladoIzquierdo-trianguloIsosceles" type="number" /> <br>
-      
-              <!-- input-ladoDerecho-TrianguloIsosceles-->
-              <label for="input-ladoDerecho-trianguloIsosceles">
-                Escribe cuanto mide el lado derecho de tu triangulo isosceles
-              </label>
-              <input class="form__input" id="input-ladoDerecho-trianguloIsosceles" type="number" /> <br>
-      
-              <!-- input-ladoIzquierdo-TrianguloIsosceles-->
-              <label for="input-base-trianguloIsosceles">
-                Escribe cuanto mide la base de tu triangulo isosceles
-              </label>
-              <input class="form__input" id="input-base-trianguloIsosceles" type="number" /> <br>
-            </div>
-            
-            <!-- botones TrianguloIsosceles -->
-            <button class="buttons"type="button" onclick="calcularAlturaTrianguloIsosceles()">
-              Calcular altura
-            </button>
-            <p id="resultado_TrianguloIsosceles" class="buttons-resultado"></p>
-          </form>
-        </section>
-      </div>
-    </main>
+    <nav class="nav">
+      <ul class="nav_ul">
+        <li class="ul_li">
+          <a href="../Figuras/figuras.html"" class=" li__a">Figure</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Cupones/cupones.html" class="li__a"> Cupon Validator </a>
+        </li>
+        <li class="ul_li">
+          <a href="../Descuentos/descuentos.html" class="li__a"> Discounts </a>
+        </li>
+        <li class="ul_li">
+          <a href="../Mediana/Mediana.html" class="li__a"> Median </a>
+        </li>
+        <li class="ul_li">
+          <a href="../Moda/moda.html" class="li__a"> Mode </a>
+        </li>
+        <li class="ul_li">
+          <a href="../Ponderado/ponderado.html" class="li__a">Weighting</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Promedio/promedio.html" class="li__a">Arithmetic mean</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Salarios/salarios.html" class="li__a">Wages</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Mediana/Mediana.html" class="li__a">PRUEBA</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- --- FOOTER SECTION --- -->
-    <footer class="footer">
-      <section class="footer-section">
-        <h2 class="footer-section__h2">Created for: Santiago Avila</h2>
-        <p class="footer-section__p">
-          This website was created in order to expose what was learned in
-          Platzi's practical JavaScript course.
-        </p>
+  <!-- De esta forma se agrega un js al html: -->
+  <script src="./figuras.js"></script>
+
+  <main class="container">
+
+    <!-- --- SQUARE FORM --- -->
+    <div class="form-container">
+      <figure class="img-container">
+        <img class="img-container__img"
+          src="https://cdn-user-icons.flaticon.com/73410/73410993/1655224237801.svg?token=exp=1655225174~hmac=cfed3dd89dac7c0069dc72b8e123f54e"
+          alt="This is a square">
+      </figure>
+      <section class="form-section">
+        <h2 class="form-section__h2">Calcula area y perimetro de un cuadrado</h2>
+        <form class="form" action="">
+          <div class="inputs-form">
+            <!-- input-Lados-Cuadrado -->
+            <label class="form__label" for="InputCuadrado">
+              Escribe cuanto mide un lado de tu cuadrado:
+            </label>
+            <input class="form__input" id="InputCuadrado" type="number" />
+          </div>
+
+          <!-- botones Cuadrado -->
+          <button class="buttons" type="button" onclick="calcularPerimetroCuadrado()">
+            Calcular el perimetro
+          </button>
+          <button class="buttons" type="button" onclick="calcularAreaCuadrado()">
+            Calcular el area
+          </button>
+
+          <p id="resultado_Cuadrado" class="buttons-resultado"></p>
+        </form>
       </section>
-    </footer>
-  </body>
+    </div>
+
+    <!-- --- FORM DEL TRINAGULO --- -->
+    <div class="form-container">
+      <figure class="img-container">
+        <img class="img-container__img"
+          src="https://cdn-user-icons.flaticon.com/73410/73410993/1655224239981.svg?token=exp=1655225174~hmac=88eb12f79d8d645b582744de0cf43c84"
+          alt="This is a triangle">
+      </figure>
+      <section class="form-section">
+        <h2 class="form-section__h2">Cacula area y perimetro del triangulo</h2>
+        <form class="form" action="">
+          <div class="inputs-form">
+            <!-- input-ladoIzquierdo-Triangulo -->
+            <label for="input-ladoIzquierdo-Triangulo">
+              Escribe cuanto mide el lado izquierdo de tu triangulo:
+            </label>
+            <input class="form__input" class="form__input" id="input-ladoIzquierdo-Triangulo" type="number" />
+            <br>
+            <!-- input-ladoDerecho-Triangulo -->
+            <label for="input-ladoDerecho-Triangulo">
+              Escribe cuanto mide el lado derecho de tu triangulo:
+            </label>
+            <input class="form__input" class="form__input" id="input-ladoDerecho-Triangulo" type="number" />
+            <br>
+
+            <!-- input-Base-Triangulo -->
+            <label for="input-Base-Triangulo">
+              Escribe cuanto mide la base de tu triangulo:
+            </label>
+            <input class="form__input" class="form__input" id="input-Base-Triangulo" type="number" />
+            <br>
+
+            <!-- input-Altura-Triangulo -->
+            <label for="input-Altura-Triangulo">
+              Escribe cuanto mide la altura de tu triangulo:
+            </label>
+            <input class="form__input" class="form__input" id="input-Altura-Triangulo" type="number" />
+          </div>
+
+          <!-- botones triangulo -->
+          <button class="buttons" type="button" onclick="calcularPerimetroTriangulo()">
+            Calcular perimetro
+          </button>
+          <button class="buttons" type="button" onclick="calcularAreaTriangulo()">
+            Calcular area
+          </button>
+          <p id="resultado_Triangulo" class="buttons-resultado"></p>
+        </form>
+      </section>
+    </div>
+
+    <!-- FORM DEL CIRCULO -->
+    <div class="form-container">
+      <figure class="img-container">
+        <img class="img-container__img"
+          src="https://cdn-user-icons.flaticon.com/73410/73410993/1655224241558.svg?token=exp=1655225174~hmac=e5db291f45b36a50941daa09fb3c7d83"
+          alt="This is a circle">
+      </figure>
+      <section class="form-section">
+        <h2 class="form-section__h2">Calcula area y perimetro del circulo</h2>
+        <form class="form" action="">
+          <div class="inputs-form">
+            <!-- input-radio-circulo -->
+            <label for="input-radio-circulo"> Escribe el radio del circulo: </label>
+            <input class="form__input" class="form__input" id="input-radio-circulo" type="text" />
+          </div>
+
+          <!-- botones circulo -->
+          <button class="buttons" type="button" onclick="calcularPerimetroCirculo()">
+            Calcular perimetro
+          </button>
+          <button class="buttons" type="button" onclick="calcularAreaCirculo()">
+            Calcular area
+          </button>
+          <p id="resultado_Circulo" class="buttons-resultado"></p>
+        </form>
+      </section>
+    </div>
+
+    <!-- FORM DEL TrianguloIsosceles -->
+    <div class="form-container form-container--margin-left">
+      <figure class="img-container">
+        <img class="img-container__img"
+          src="https://cdn-user-icons.flaticon.com/73410/73410993/1655224909966.svg?token=exp=1655225815~hmac=80b0e366b17c779b55716e589c091372"
+          alt="This is a Isosceles triangle">
+      </figure>
+      <section class="form-section">
+        <h2 class="form-section__h2">Calcula altura de un triangulo isosceles</h2>
+
+        <form class="form" action="">
+          <div class="inputs-form">
+            <!-- input-ladoIzquierdo-TrianguloIsosceles-->
+            <label for="input-ladoIzquierdo-trianguloIsosceles">
+              Escribe cuanto mide el lado izquierdo de tu triangulo isosceles
+            </label>
+            <input class="form__input" id="input-ladoIzquierdo-trianguloIsosceles" type="number" /> <br>
+
+            <!-- input-ladoDerecho-TrianguloIsosceles-->
+            <label for="input-ladoDerecho-trianguloIsosceles">
+              Escribe cuanto mide el lado derecho de tu triangulo isosceles
+            </label>
+            <input class="form__input" id="input-ladoDerecho-trianguloIsosceles" type="number" /> <br>
+
+            <!-- input-ladoIzquierdo-TrianguloIsosceles-->
+            <label for="input-base-trianguloIsosceles">
+              Escribe cuanto mide la base de tu triangulo isosceles
+            </label>
+            <input class="form__input" id="input-base-trianguloIsosceles" type="number" /> <br>
+          </div>
+
+          <!-- botones TrianguloIsosceles -->
+          <button class="buttons" type="button" onclick="calcularAlturaTrianguloIsosceles()">
+            Calcular altura
+          </button>
+          <p id="resultado_TrianguloIsosceles" class="buttons-resultado"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- --- FOOTER SECTION --- -->
+  <footer class="footer">
+    <section class="footer-section">
+      <h2 class="footer-section__h2">Created for: Santiago Avila</h2>
+      <p class="footer-section__p">
+        This website was created in order to expose what was learned in
+        Platzi's practical JavaScript course.
+      </p>
+    </section>
+  </footer>
+</body>
+
 </html>

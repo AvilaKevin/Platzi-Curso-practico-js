@@ -1,13 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Calcula mediana</h1>
-    <script src="/Mediana/Mediana.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet" />
+  <title>Mediana</title>
+</head>
+
+<body>
+
+  <!-- --- TOP SECTION --- -->
+  <header class="header">
+    <a href="../index.html">
+      <div class="tittle-container">
+        <h2 class="tittle-container__tittle">
+          MATH <span class="tittle-container__emoji">➗</span>
+        </h2>
+        <h2 class="tittle-container__tittle tittle-container__tittle--align">
+          <span class="tittle-container__emoji">✖️</span> TOOLS
+        </h2>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <ul class="nav_ul">
+        <li class="ul_li">
+          <a href="../Figuras/figuras.html"" class=" li__a">Figure</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Cupones/cupones.html" class="li__a"> Cupon Validator </a>
+        </li>
+        <li class="ul_li">
+          <a href="../Descuentos/descuentos.html" class="li__a"> Discounts </a>
+        </li>
+        <li class="ul_li">
+          <a href="../Mediana/Mediana.html" class="li__a"> Median </a>
+        </li>
+        <li class="ul_li">
+          <a href="../Moda/moda.html" class="li__a"> Mode </a>
+        </li>
+        <li class="ul_li">
+          <a href="../Ponderado/ponderado.html" class="li__a">Weighting</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Promedio/promedio.html" class="li__a">Arithmetic mean</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Salarios/salarios.html" class="li__a">Wages</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Mediana/Mediana.html" class="li__a">PRUEBA</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- --- MAIN SECTION --- -->
+  <main class="main_container">
+
+    <section class="form_container">
+
+      <h1 class="form_container__h1">Calcula Mediana</h1>
+      <figure class="img_container">
+        <img class="img_container__img" src="https://diego0105.github.io/CursoPracticoJavaScript/img/mediana.png"
+          alt="Mediana image">
+      </figure>
+
+      <form class="form" action="">
+
+        <!-- LISTA -->
+        <label class="form__labels" for="input-lista">
+          Introduce los valores a calcular:
+          <input class="form__input form__input--margin_left" id="input-lista" type="text" />
+        </label>
+        <!-- BOTONES -->
+        <button class="buttons" type="button" onclick="resultadoMediana()">
+          Calcular Mediana
+        </button>
+
+      </form>
+
+      <!-- RESULTADO -->
+      <div class="result_container">
+        <p class="result_container__p1">La mediana es: </p>
+        <p class="result_container__p2" id="ResultadoP"></p>
+      </div>
+
+    </section>
+
+  </main>
+  <script src="/Mediana/Mediana.js"></script>
+
+
+  <!-- --- FOOTER SECTION --- -->
+  <footer class="footer">
+    <section class="footer-section">
+      <h2 class="footer-section__h2">Created for: Santiago Avila</h2>
+      <p class="footer-section__p">
+        This website was created in order to expose what was learned in
+        Platzi's practical JavaScript course.
+      </p>
+    </section>
+  </footer>
+
+</body>
+
 </html>
