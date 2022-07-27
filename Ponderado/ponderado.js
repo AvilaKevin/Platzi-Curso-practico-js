@@ -53,44 +53,56 @@ var sumaCreditos = creditos.reduce(
 //6. Se crea variable para dar resultado
 const resultado = sumaMultiplicacion / sumaCreditos;
 
-//Se crea contador para poder identificar los nuevos inputs que se van creando
+const contenedor = document.getElementById('valores');
+
 contadorNota = 1;
 
-// CONEXION HTML
+//!-- --- CONEXION HTML --- --!//
 function agregaCasillas() {
-    //Se crea contador
     contadorNota++;
 
     //Se crea el elemento / en este caso es el contenedor
     var div = document.createElement('div');
-    //Se le agregan atributos al alemento
+    //Se le agregan atributos al div
     div.setAttribute('class', 'nota_' + contadorNota);
 
     //Se procede introducir elementos dentro del div
     div.innerHTML = '<label class="form__labels" for="input-notas"> Nota ' + contadorNota + '<input class="form__input form__input--margin_left" id="input_notas_' + contadorNota + '" type="number" placeholder="Notas" /></label><label class="form__labels" for="input-creditos"><input class="form__input form__input--margin_left" id="input_creditos_' + contadorNota + '" type="number" placeholder="Creditos" /></label>';
 
-    //Se renderiza el div /
-    document.getElementById('valores').appendChild(div);
+    //Se renderiza el div
+    contenedor.appendChild(div);
 
     // si queremos utilizar el contador para otras cosas se usa el return
     return contadorNota;
 }
 
-function resultadoPonderado() {
-    //Se crea array para almacenar los objetos
-    let valores = [];
+//Se crea array para almacenar los objetos
+let arrayValores = [];
 
+function resultadoPonderado() {
+    console.log(contadorNota)
     //Mediante un for se procede a capturar los datos del input utilizando como identificador el contador
-    for (var i = 0; i < contadorNota; i++) {
-        const inputNota = parseInt(document.getElementById('input_notas_' + contadorNota).value);
-        const inputCreditos = parseInt(document.getElementById('input_creditos_' + contadorNota).value);
+    for (var i = 1; i <= contadorNota; i++) {
+        const inputNota = parseInt(document.getElementById('input_notas_' + i).value);
+        const inputCreditos = parseInt(document.getElementById('input_creditos_' + i).value);
         //Por cada nota se crea un objeto
         const objetoNotas = {
             nota: inputNota,
             creditos: inputCreditos
         };
         //Se almacena el objeto dentro del array
-        valores.push(objetoNotas);
-        console.log(valores);
+        arrayValores.push(objetoNotas);
     }
+
+    console.log(arrayValores);
+    return arrayValores;
 }
+
+// actualizarContador();
+// function actualizarContador() {
+//     let divs = contenedor.children;
+//     contadorNota = 1;
+//     for (let i = 0; i < divs.length; i++) {
+//         divs[i].children[1].innerHTML = contadorNota++;
+//     }
+// }
