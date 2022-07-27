@@ -32,6 +32,7 @@ for (var i = 0; i < ponderado.length; i++) {
 // });
 
 
+
 //3. Se lee el Arraysuma y se realiza la suma de los valores.
 var sumaMultiplicacion = Arraysuma.reduce(
     function (valorAcumulado, nuevoValor) {
@@ -80,29 +81,49 @@ function agregaCasillas() {
 let arrayValores = [];
 
 function resultadoPonderado() {
-    console.log(contadorNota)
+    let arrayValores = [];
+
     //Mediante un for se procede a capturar los datos del input utilizando como identificador el contador
     for (var i = 1; i <= contadorNota; i++) {
         const inputNota = parseInt(document.getElementById('input_notas_' + i).value);
         const inputCreditos = parseInt(document.getElementById('input_creditos_' + i).value);
+
         //Por cada nota se crea un objeto
         const objetoNotas = {
             nota: inputNota,
             creditos: inputCreditos
         };
+
         //Se almacena el objeto dentro del array
         arrayValores.push(objetoNotas);
     }
 
+    // arrayValores.indexOf(input[, fromIndex])
+
     console.log(arrayValores);
     return arrayValores;
 }
+
+
+// function actualizarContador() {
+//     contadorNota = 1;
+//     let divs = contenedor.children;
+//     let prueba = divs.length;
+//     return contadorNota = prueba;
+
+//     console.log('soy lengt ' + divs.length);
+//     console.log('soy prueba ' + divs[0].children[1]);
+
+//     for (let i = 0; i < divs.length; i++) {
+//         divs[i].children[0].innerHTML = '<label class="form__labels" for="input-notas"> Nota ' + contadorNota + '<input class="form__input form__input--margin_left" id="input_notas_' + contadorNota + '" type="number" placeholder="Notas" /></label>';
+//     }
+// }
 
 // actualizarContador();
 // function actualizarContador() {
 //     let divs = contenedor.children;
 //     contadorNota = 1;
 //     for (let i = 0; i < divs.length; i++) {
-//         divs[i].children[1].innerHTML = contadorNota++;
+//         divs[i].children[0].innerHTML = '<label class="form__labels" for="input-notas"> Nota ' + contadorNota + '<input class="form__input form__input--margin_left" id="input_notas_' + contadorNota + '" type="number" placeholder="Notas" /></label>';
 //     }
 // }
