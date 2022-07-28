@@ -46,13 +46,13 @@
           <a href="../Moda/moda.html" class="li__a">Moda</a>
         </li>
         <li class="ul_li">
-          <a href="../Ponderado/ponderado.html" class="li__a">Weighting</a>
+          <a href="../Ponderado/ponderado.html" class="li__a">Ponderado</a>
         </li>
         <li class="ul_li">
-          <a href="../Promedio/promedio.html" class="li__a">Arithmetic mean</a>
+          <a href="../Promedio/promedio.html" class="li__a">Promedio</a>
         </li>
         <li class="ul_li">
-          <a href="../Salarios/salarios.html" class="li__a">Wages</a>
+          <a href="../Salarios/salarios.html" class="li__a">Salarios</a>
         </li>
         <li class="ul_li">
           <a href="../Mediana/Mediana.html" class="li__a">PRUEBA</a>
@@ -90,17 +90,19 @@
           </div>
         </div>
         <!-- BOTONES -->
-        <button class="buttons" onclick="agregaCasillas()" type="button">
-          Agregar casillas
-        </button>
-        <button class="buttons" type="button" onclick="resultadoPonderado()">
-          Calcular ponderado
-        </button>
+        <div class="buttons_container">
+          <button class="buttons" onclick="agregaCasillas()" type="button">
+            Agregar nota
+          </button>
+          <button class="buttons" type="button" onclick="resultadoPonderado()">
+            Calcular promedio ponderado
+          </button>
+        </div>
       </form>
 
       <!-- RESULTADO -->
       <div class="result_container">
-        <p class="result_container__p1">La moda es: </p>
+        <p class="result_container__p1">El promedio de notas es: </p>
         <p class="result_container__p2" id="ResultadoP"></p>
       </div>
 

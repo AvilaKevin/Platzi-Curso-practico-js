@@ -97,17 +97,32 @@ body {
 
 .form_container__h1 {
     font-size: var(--h1);
+    margin-bottom: 20px;
 }
 
 .img_container {
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
     text-align: center;
     margin: auto;
 }
 
 .img_container__img {
     width: 40%;
+}
+
+.new_inputs_container {
+    height: 200px;
+    max-height: 200px;
+    overflow-y: scroll;
+    margin: auto;
+    margin-bottom: 26px;
+    width: 1000px;
+}
+
+.nota_1 {
+    margin-left: 40px;
+    display: flex;
 }
 
 .form__input {
@@ -126,6 +141,17 @@ body {
 
 .form__input--margin_left {
     margin-left: 20px;
+}
+
+.closeEmoji {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.buttons_container {
+    width: 500px;
+    display: flex;
+    margin: auto;
 }
 
 .buttons {
