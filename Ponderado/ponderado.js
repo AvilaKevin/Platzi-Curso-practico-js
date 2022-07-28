@@ -1,29 +1,14 @@
-var ponderado = [
-    {
-        nota: 10,
-        creditos: 2
-    },
-    {
-        nota: 8,
-        creditos: 5
-    },
-    {
-        nota: 7,
-        creditos: 5
-    }
-]
-
-// // El paso 2 se pudo hacer con el metodo .map:
-// const notesWithCredit = ponderado.map(function (noteObject) {
-//     return noteObject.nota * noteObject.creditos;
-// });
-
 const contenedor = document.getElementById('valores');
 
 contadorNota = 1;
 
 //!-- --- CONEXION HTML --- --!//
 function agregaCasillas() {
+    //para que no haya ningun problema al momento de agregar nuevos campos se despues de haber eliminado algunos, se debio haver lo siguiente: 
+    //Esto me trae los hijos del contenedor, en este caso son los divs
+    let divs = contenedor.children;
+    contadorNota = divs.length;
+    //Fin
     contadorNota++;
 
     //Se crea el elemento / en este caso es el contenedor
@@ -32,7 +17,7 @@ function agregaCasillas() {
     div.setAttribute('class', 'nota_' + contadorNota);
 
     //Se procede introducir elementos dentro del div
-    div.innerHTML = '<label class="form__labels" for="input-notas"> Nota ' + contadorNota + '<input class="form__input form__input--margin_left" id="input_notas_' + contadorNota + '" type="number" placeholder="Notas" /></label><label class="form__labels" for="input-creditos"><input class="form__input form__input--margin_left" id="input_creditos_' + contadorNota + '" type="number" placeholder="Creditos" /></label>';
+    div.innerHTML = '<label class="form__labels" for="input-notas"> Nota ' + contadorNota + '<input class="form__input form__input--margin_left" id="input_notas_' + contadorNota + '" type="number" placeholder="Notas" /></label><label class="form__labels" for="input-creditos"><input class="form__input form__input--margin_left" id="input_creditos_' + contadorNota + '" type="number" placeholder="Creditos" /></label><button onclick="eliminar(this)">Eliminar</button>';
 
     //Se renderiza el div
     contenedor.appendChild(div);
@@ -43,7 +28,6 @@ function agregaCasillas() {
 
 
 function almacenamientoNotas() {
-    // //Se recetea el array
     let arrayNotas = [];
 
     //Mediante un for se procede a capturar los datos del input utilizando como identificador el contador
@@ -102,30 +86,34 @@ function resultadoPonderado() {
     //6. Se crea variable para dar resultado
     const resultado = sumaMultiplicacion / sumaCreditos;
 
-    console.log(resultado);
-    resultadoHtml.innerHTML = resultado;
+    if (isNaN(resultado)) {
+        resultadoHtml.innerHTML = "Asegurate de llenar todos los campos";
+    } else {
+        resultadoHtml.innerHTML = resultado;
+    }
 }
 
+/**
+ * Método para eliminar el div contenedor del input
+ * @param {this} e 
+ */
+const eliminar = (e) => {
+    const divPadre = e.parentNode;
+    contenedor.removeChild(divPadre);
+    actualizarContador();
+};
 
-// function actualizarContador() {
-//     contadorNota = 1;
-//     let divs = contenedor.children;
-//     let prueba = divs.length;
-//     return contadorNota = prueba;
+/**
+ * Método para actualizar el contador de los elementos agregados
+*/
+const actualizarContador = () => {
+    let divs = contenedor.children;
+    contadorNota = 0;
+    for (let i = 0; i < divs.length; i++) {
+        contadorNota++
+        //Esto indica en donde se va a introducir los elementos
+        divs[i].children[0].innerHTML = 'Nota ' + contadorNota + '<input class="form__input form__input--margin_left" id="input_notas_' + contadorNota + '" type="number" placeholder="Notas" />';
+        divs[i].children[1].innerHTML = '<input class="form__input form__input--margin_left" id="input_creditos_' + contadorNota + '" type="number" placeholder="Creditos" />';
+    }
+};
 
-//     console.log('soy lengt ' + divs.length);
-//     console.log('soy prueba ' + divs[0].children[1]);
-
-//     for (let i = 0; i < divs.length; i++) {
-//         divs[i].children[0].innerHTML = '<label class="form__labels" for="input-notas"> Nota ' + contadorNota + '<input class="form__input form__input--margin_left" id="input_notas_' + contadorNota + '" type="number" placeholder="Notas" /></label>';
-//     }
-// }
-
-// actualizarContador();
-// function actualizarContador() {
-//     let divs = contenedor.children;
-//     contadorNota = 1;
-//     for (let i = 0; i < divs.length; i++) {
-//         divs[i].children[0].innerHTML = '<label class="form__labels" for="input-notas"> Nota ' + contadorNota + '<input class="form__input form__input--margin_left" id="input_notas_' + contadorNota + '" type="number" placeholder="Notas" /></label>';
-//     }
-// }
