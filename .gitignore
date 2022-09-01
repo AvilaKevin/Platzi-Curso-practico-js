@@ -1,3 +1,6 @@
+# My Files
+./Salarios
+
 # Logs
 logs
 *.log
@@ -102,6 +105,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-# My Files
-/Salarios/
