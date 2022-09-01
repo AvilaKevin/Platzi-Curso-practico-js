@@ -21,18 +21,23 @@ function resultadoMediana() {
   const numberArray = listaModificada.map(Number);
   numberArray.sort(comparacion);
 
-  // NUMERO MITAD
-  const mitadLista1 = parseInt(numberArray.length / 2);
-  const mitadLista2 = (numberArray[mitadLista1 - 1] + numberArray[mitadLista1]) / 2;
-
-  // RESULTADO
-  let mediana;
-
-  if (esPar(numberArray.length)) {
-    mediana = mitadLista2;
-    ResultadoP.innerText = mediana;
+  if (numberArray.length === 1) {
+    ResultadoP.innerText = "Asegurate de haber introducido un valor válido";
   } else {
-    mediana = numberArray[mitadLista1];
-    ResultadoP.innerText = mediana;
+    // NUMERO MITAD
+    const mitadLista1 = parseInt(numberArray.length / 2);
+    const mitadLista2 = (numberArray[mitadLista1 - 1] + numberArray[mitadLista1]) / 2;
+
+    // RESULTADO
+    let mediana;
+
+    if (esPar(numberArray.length)) {
+      mediana = mitadLista2;
+      ResultadoP.innerText = mediana;
+    } else {
+      mediana = numberArray[mitadLista1];
+      ResultadoP.innerText = mediana;
+    }
   }
+
 }

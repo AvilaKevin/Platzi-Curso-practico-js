@@ -1,13 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Calcula el promedio</h1>
-    <script src="/Promedio/promedio.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet" />
+  <title>Promedio</title>
+  <link rel="icon" href="../icons/png/MainIcon.PNG" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- --- TOP SECTION --- -->
+  <header class="header">
+    <a href="../index.html">
+      <div class="tittle-container">
+        <h2 class="tittle-container__tittle">
+          MATH <span class="tittle-container__emoji">➗</span>
+        </h2>
+        <h2 class="tittle-container__tittle tittle-container__tittle--align">
+          <span class="tittle-container__emoji">✖️</span> TOOLS
+        </h2>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <ul class="nav_ul">
+        <li class="ul_li">
+          <a href="../Figuras/figuras.html"" class=" li__a">Figuras</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Cupones/cupones.html" class="li__a">Valiadador de cupones</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Descuentos/descuentos.html" class="li__a">Descuentos</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Mediana/Mediana.html" class="li__a">Mediana</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Moda/moda.html" class="li__a">Moda</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Ponderado/ponderado.html" class="li__a">Ponderado</a>
+        </li>
+        <li class="ul_li">
+          <a href="../Promedio/promedio.html" class="li__a">Promedio</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- --- MAIN SECTION --- -->
+  <main class="main_container">
+
+    <section class="form_container">
+
+      <h1 class="form_container__h1">Calcula Promedio</h1>
+      <figure class="img_container">
+        <img class="img_container__img" src="https://diego0105.github.io/CursoPracticoJavaScript/img/promedio.png"
+          alt="Mediana image">
+      </figure>
+
+      <form class="form" action="">
+
+        <!-- LISTA -->
+        <label class="form__labels" for="input-lista">
+          Introduce los valores a calcular:
+          <input class="form__input form__input--margin_left" id="input-lista" type="text" />
+        </label>
+        <!-- BOTONES -->
+        <button class="buttons" type="button" onclick="resultadoPromedio()">
+          Calcular promedio
+        </button>
+
+      </form>
+
+      <!-- RESULTADO -->
+      <div class="result_container">
+        <p class="result_container__p1">El promedio es: </p>
+        <p class="result_container__p2" id="ResultadoP"></p>
+      </div>
+
+    </section>
+
+  </main>
+  <script src="./promedio.js"></script>
+
+
+  <!-- --- FOOTER SECTION --- -->
+  <footer class="footer">
+    <section class="footer-section">
+      <h2 class="footer-section__h2">Creado por: Santiago Avila</h2>
+      <p class="footer-section__p">
+        Este sitio fue creado para exponer algunas habilidades adquiridas en el curso practico de JavaScript de Platzi.
+      </p>
+    </section>
+  </footer>
+
+</body>
+
 </html>
