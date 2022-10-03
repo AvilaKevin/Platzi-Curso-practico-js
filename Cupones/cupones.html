@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Fonts -->
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,7 +68,6 @@
       </figure>
 
       <form class="form" action="">
-        <script src="/Cupones/cupones.js"></script>
         <!-- PRECIO DEL ARTICULO -->
         <label class="form__labels form__labels--margin_right" for="input-precio">
           Introduce el precio del articulo:
@@ -89,6 +87,7 @@
 
       <!-- RESULTADO -->
       <div class="result_container">
+        <p class="result_container__p1">los cupones validos son: cupon1, cupon2, cupon3</p>
         <p class="result_container__p1">El valor a pagar es de: </p>
         <p class="result_container__p2" id="ResultadoP"></p>
       </div>
@@ -96,7 +95,7 @@
     </section>
 
   </main>
-
+  <script src="./cupones.js"></script>
 
   <!-- --- FOOTER SECTION --- -->
   <footer class="footer">

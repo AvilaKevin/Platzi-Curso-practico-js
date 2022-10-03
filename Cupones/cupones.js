@@ -18,8 +18,6 @@ function resultadoCupones() {
 
   const ResultadoP = document.getElementById("ResultadoP"); // MOSTRAR VALOR EN HTML. 3. Se llama la etiqueta p en una variable, para poderla utilizar
 
-  console.log(valor);
-  console.log(typeof valor);
 
   function Operacion() {
     // Se crea una varible para validar.
